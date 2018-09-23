@@ -1,3 +1,9 @@
+require 'pry'
+
+ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
+
 def alphabetize(arr)
-  # code here
+  arr.sort_by do |phrase|
+    phrase.chars.map { |c| ESPERANTO_ALPHABET.index(c) }
+  end
 end
